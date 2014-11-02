@@ -1,0 +1,114 @@
+<%@ page language="java" import="java.util.*,com.csustflea.model.*"
+	pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
+<%
+	String listUserUse = null;
+	String listUserAdd = null;
+	String listUserCol = null;
+	String listUserEma = null;
+	String listUserGra = null;
+	String listUserPho = null;
+	String listUserRea = null;
+	String listUserSex = null;
+	String listUserPwd = null;
+	int id = 0;
+	int listUserAge = 0;
+	if (session.getAttribute("listUserTemp") != null) {
+		User u = (User) session.getAttribute("listUserTemp");
+		listUserUse = u.getUsername();
+		listUserAdd = u.getAddress();
+		listUserCol = u.getCollege();
+		listUserEma = u.getEmail();
+		listUserGra = u.getGrade();
+		listUserPho = u.getPhonenumber();
+		listUserRea = u.getRealname();
+		listUserSex = u.getSex();
+		listUserPwd = u.getPassword();
+		listUserAge = u.getAge();
+	}
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="<%=basePath%>">
+
+<title>My JSP 'mainPage.jsp' starting page</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+
+<link rel="stylesheet" type="text/css"
+	href="css/myMarket/iframe/basicInformation.css">
+
+</head>
+
+<body>
+	<div class="mainPageLayout">
+		<div class="basicInforBlank"></div>
+		<div class="changeFacePic">
+			<div class="submitPic">
+				<img src='<s:property value="#attr.listUserTemp.image"/>'>
+			</div>
+			<form action="CpUser_updateuserpic" method="post"
+				enctype="multipart/form-data">
+				<div>
+					<div>
+						<s:file name="doc" style="width:68px;margin-top:-20px;"></s:file>
+					</div>
+					<div style="margin-left: 350px;">
+						<input type="submit" value="提交图片"></input>
+					</div>
+				</div>
+			</form>
+			<form action="CpUser_updateuserifo" method="post">
+				<div class="changeList">
+					<ul style="margin-top: 30px;">
+						<li>账号名:&nbsp;&nbsp;<input type="text" name="user.username"
+							value="<%=listUserUse%>"></li>
+						<li>手机:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+							name="user.phonenumber" value="<%=listUserPho%>">
+						</li>
+						<li>性别:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+							name="user.sex" value="<%=listUserSex%>">
+						</li>
+						<li>年龄:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+							name="user.age" value="<%=listUserAge%>">
+						</li>
+						<li>真实姓名:<input type="text" name="user.realname"
+							value="<%=listUserRea%>">
+						</li>
+						<li>年级:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+							name="user.grade" value="<%=listUserGra%>">
+						</li>
+						<li>邮箱:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+							name="user.email" value="<%=listUserEma%>">
+						</li>
+						<li>院校:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+							name="user.college" value="<%=listUserCol%>">
+						</li>
+						<li>住址:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"
+							name="user.address" value="<%=listUserAdd%>">
+						</li>
+						<li style="display:none">密码:&nbsp;&nbsp;&nbsp;&nbsp;<input
+							type="text" name="user.password" value="<%=listUserPwd%>">
+						</li>
+					</ul>
+					<div style="margin-left: 350px;">
+						<input type="submit" value="提交信息"></input>
+					</div>
+				</div>
+			</form>
+			<s:debug></s:debug>
+		</div>
+	</div>
+</body>
+</html>

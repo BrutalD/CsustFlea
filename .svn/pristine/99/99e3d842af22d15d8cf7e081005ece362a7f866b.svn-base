@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+
+.top1{
+	height: 25px;
+}
+
+.top2{
+	height: 120px;
+}
+
+.top3{
+	float: left;
+	margin-right: 15px;
+	padding-top: 3px;
+}
+.top4{
+	float: left;
+	padding-top: 3px;
+}
+
+
+a.topid1{
+	color:black;
+	font-family: "黑体";
+}
+
+#topid2{
+	font-size: 16px;
+}
+
+a.topid2{
+	font-family: "黑体";
+	color: white;
+}
+
+.topsearch1{
+	width:370px;
+	height:34px;
+	margin-top:70px;
+	float: left;
+}
+
+.topsearch2{
+	margin-top:70px;
+	float: left;
+}
+
+.searchpic{
+	float:left;
+	width:44px;
+	height:33px;
+}
+

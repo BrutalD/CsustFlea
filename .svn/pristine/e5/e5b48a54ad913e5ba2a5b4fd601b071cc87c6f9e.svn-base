@@ -1,0 +1,55 @@
+@CHARSET "UTF-8";
+
+body,html {
+	width: 1004px;
+	height: 1110px;
+	margin: 0px auto;
+	padding: 0px;
+	font-family: 黑体;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #FFFFFD;
+}
+
+img {
+	border: 0px;
+}
+
+ul,li {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+#layout {
+	width: 1004px;
+	height: 1110px;
+	text-align: left;
+	background-image: url(../../img/myMarket/layout.gif);
+}
+
+#layout1 {
+	height: 208px;
+	width: 1004px;
+	background-image: url(../../img/myMarket/layout1.gif);
+}
+
+#layout2 {
+	height: 712px;
+	width: 1004px;
+}
+
+#layout3 {
+	width: 1004px;
+	height: 190px;
+}
+.getBackgroundImg{
+	background-image: url(../../img/myMarket/selectBg.gif);
+}
+
+.noBackgroundImg{
+	
+}

@@ -1,0 +1,116 @@
+@CHARSET "UTF-8";
+
+.nonselected{
+}
+.nav1{
+	height: 48px;
+}
+.nav2{
+	height: 160px;
+	width:1004px;
+}
+#nav3{
+	float: left;
+	margin-left: 27px;
+	width:73px;
+	height:43px;
+	line-height: 35px;
+	margin-top:5px;
+}
+#nav4{
+	float: left;
+	margin-left: 22px;
+	line-height: 35px;
+	width:73px;
+	height:43px;
+	margin-top:5px;
+}
+#nav5{
+	float: left;
+	margin-left: 14px;
+	line-height: 35px;
+	width:73px;
+	height:43px;
+	margin-top:5px;
+}
+#nav6{
+	float: left;
+	margin-left: 10px;
+	line-height: 35px;
+	width:73px;
+	height:43px;
+	margin-top:5px;
+}
+#nav7{
+	float: left;
+	margin-left: 15px;
+	line-height: 35px;
+	width:40px;
+	height:43px;
+	margin-top:5px;
+}
+#nav8{
+	float: left;
+	margin-left: 18px;
+	line-height: 35px;
+	width:73px;
+	height:43px;
+	margin-top:5px;
+}
+#nav9{
+	float: left;
+	margin-left: 25px;
+	line-height: 35px;
+	width:73px;
+	height:43px;
+	margin-top:5px;
+}
+
+
+a.navherf{
+	color:black;
+	font-family: "黑体"；
+}
+.select{
+	background-image: url('../../img/index/navbg.gif');
+}
+.select1{
+	background-image: url("../../img/index/navbg1.gif");
+}
+.select a{
+	color:white;
+}
+.select1 a{
+	color:white;
+}
+#navlist{
+
+}
+.nav10 li{
+	list-style: none;
+	margin-left: 20px;
+	float: left;
+	width:170px;
+	height:155px;
+}
+
+ul{
+	margin: 0px;
+	padding: 0px;
+}
+.navword1{
+	margin-top: 15px;
+	margin-left: 45px;
+}
+.navword2{
+	margin-top: -5px;
+	margin-left: 45px;
+}
+.navword3{
+	margin-top: -1px;
+	margin-left: 45px;
+}
+.navword4{
+	margin-top: 3px;
+	margin-left: 45px;
+}

@@ -1,0 +1,446 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+
+<%
+String flag=null; 
+if(session.getAttribute("logUserTemp")==null)
+{ flag = "a";}
+else{flag = "b";}
+ %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="<%=basePath%>">
+
+<title>长理跳蚤市场</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<link rel="shortcut icon" href="img/index/logo.gif">
+<link rel="stylesheet" type="text/css" href="css/index/index.css">
+<link rel="stylesheet" type="text/css" href="css/index/top.css">
+<link rel="stylesheet" type="text/css" href="css/index/navigator.css">
+<link rel="stylesheet" type="text/css" href="css/index/rotate.css">
+<link rel="stylesheet" type="text/css" href="css/index/trend.css">
+<link rel="stylesheet" type="text/css" href="css/index/article.css">
+<link rel="stylesheet" type="text/css" href="css/index/billboard.css">
+<link rel="stylesheet" type="text/css" href="css/index/bottem.css">
+<link rel="stylesheet" type="text/css" href="css/index/blank.css">
+<link rel="stylesheet" type="text/css"
+	href="css/index/skitter.styles.css" media="all">
+<link rel="stylesheet" href="extjs/resources/css/ext-all-gray.css"
+	type="text/css"></link>
+
+<script type="text/javascript" src="extjs/bootstrap.js"></script>
+<script type="text/javascript" src="extjs/ext-lang-zh_CN.js"></script>
+
+<script type="text/javascript" src="js/index/nav.js"></script>
+<script type="text/javascript" src="js/index/jquery-1.6.3.min.js"></script>
+<script type="text/javascript" src="js/index/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/index/jquery.skitter.min.js"></script>
+<script type="text/javascript" src="js/index/logAndReg.js"></script>
+
+<script type="text/javascript" language="javascript">
+	$(document).ready(function() {
+		$('.box_skitter_large').skitter({
+			theme : 'clean',
+			numbers_align : 'center',
+			progressbar : true,
+			dots : true,
+			preview : true
+		});
+	});
+	
+	
+	login();
+	Ext.onReady(function(){
+	  Ext.Msg.alert('温馨提示','新用户你好,请登录');
+	});
+	
+	
+	var flag = "<%= flag %>";
+	function checklogin(){
+	 if (flag=="a"){
+			Ext.Msg.alert('温馨提示','您还没登录，请先登录');  }
+	 else {
+      window.location.href="page/myMarket.jsp";
+	}
+	}
+	
+	function checkrelogin(){
+	  if (flag =="b") 
+	  {
+	    Ext.MessageBox.show({
+	     title:'温馨提示',
+	     msg:'用户已登录，请点击确定先退出',
+	     modal:true,
+         fn:callBack,	     
+	     buttons:Ext.Msg.YESNO,
+	    });
+	    function callBack(id){
+	     if(id == "yes"){
+	    window.location="page/util/exit.jsp";
+	    }
+	    }
+	    }
+	 else {
+	   login();
+	 }
+	}
+	
+    
+     <%-- <% if((String)session.getAttribute("logFlag")=="qqq") {%>
+        alert("用户名与密码不匹配");
+ 	  <%session.setAttribute("logFlag", null);}%> --%>
+ 	  
+ 	
+</script>
+
+<style type="text/css">
+.box_skitter {
+	margin-top: 10px
+}
+</style>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="top1">
+			<div class="blk3"></div>
+			<div class="top3">
+				<div class="topid2" onclick="checkrelogin()" id="topid2"
+					style="cursor:pointer;color:white;font-family: '黑体'">登录</div>
+			</div>
+			<div class="top3">
+				<div class="topid2" onclick="register()" id="topid2"
+					style="cursor:pointer;color:white;font-family: '黑体'">注册</div>
+			</div>
+			<div class="top3">
+				<div class="topid2" id="topid2" onclick="checklogin()"
+					style="cursor:pointer;color:white;font-family: '黑体'">我的市场</div>
+			</div>
+			<div class="blk4"></div>
+			<div class="top4">
+				<a href="page/phoneWeb.jsp" class="topid1" id="topid2">手机客户端</a>
+			</div>
+			<div class="blk5"></div>
+			<div class="top4">
+				<a href="" class="topid1" id="topid2">梦之站首页</a>
+			</div>
+			<div class="blk6"></div>
+			<div class="top4">
+				<a href="index.jsp" class="topid1" id="topid2">市场首页</a>
+			</div>
+		</div>
+		<div class="top2">
+			<div class="blk7"></div>
+			
+			<div class="topsearch1">
+			<form>
+				<div class="searchpic">
+					<img src="img/index/searchpic.gif" />
+				</div>
+				<div style="float:left;">
+					<input type="text" value="搜索身边的二货 "
+						style="color:gray;width:236px;height:33px;line-height:30px;"
+						onfocus="if(value='搜索身边的二货') value=' '"
+						onblur="if(value=' ') value='搜索身边的二货'" />
+				</div>
+				<div style="float: left;width:78px;height:33px;">
+					<input type="submit" value=''
+						style="background-image: url('img/index/search.gif');width: 78px;height: 33px;padding: 0px;border: 0px;" />
+				</div>
+				</form>
+			</div>
+		</div>
+		<div class="nav1">
+			<div style="width:156px;height:43px;float: left;"></div>
+			<div id="nav11" class="select"
+				style="float:left;height:43px;width:73px;line-height: 35px;margin-left:14px;margin-top:5px;"
+				onmouseover="change(this,'nav11');">
+				<a href="page/livingGoods.jsp" class="navherf" id="topid2">生活用品</a>
+			</div>
+			<div id="nav3" onmouseover="change(this,'nav3');" class="nonselected">
+				<a href="" class="navherf" id="topid2">运动装备</a>
+			</div>
+			<div id="nav4" onmouseover="change(this,'nav4');" class="nonselected">
+				<a href="" class="navherf" id="topid2">电子产品</a>
+			</div>
+			<div id="nav5" onmouseover="change(this,'nav5');" class="nonselected">
+				<a href="" class="navherf" id="topid2">交通工具</a>
+			</div>
+			<div id="nav6" onmouseover="change(this,'nav6');" class="nonselected">
+				<a href="" class="navherf" id="topid2">书籍资料</a>
+			</div>
+			<div id="nav7" onmouseover="change(this,'nav7');" class="nonselected">
+				<a href="" class="navherf" id="topid2">求购</a>
+			</div>
+			<div id="nav8" onmouseover="change(this,'nav8');" class="nonselected">
+				<a href="" class="navherf" id="topid2">服装箱包</a>
+			</div>
+			<div id="nav9" onmouseover="change(this,'nav9');" class="nonselected">
+				<a href="" class="navherf" id="topid2">维修专区</a>
+			</div>
+		</div>
+		<div class="rot1">
+			<div class="box_skitter box_skitter_large">
+				<ul>
+					<li><a href="#cube"><img src="img/index/001.jpg"
+							class="cube" /> </a>
+						<div class="label_text">
+							<p>cube</p>
+						</div></li>
+					<li><a href="#cubeRandom"><img src="img/index/002.jpg"
+							class="cubeRandom" /> </a>
+						<div class="label_text">
+							<p>cubeRandom</p>
+						</div></li>
+					<li><a href="#block"><img src="img/index/003.jpg"
+							class="block" /> </a>
+						<div class="label_text">
+							<p>block</p>
+						</div></li>
+					<li><a href="#cubeStop"><img src="img/index/004.jpg"
+							class="cubeStop" /> </a>
+						<div class="label_text">
+							<p>cubeStop</p>
+						</div></li>
+				</ul>
+			</div>
+		</div>
+		<div style="height: 20px;width: 1004px;"></div>
+		<div class="nav2">
+			<div style="width:100px;height:145px;float: left;"></div>
+			<ul class="nav10">
+				<li id="navlist">
+					<div>
+						<a href=""><img src="img/index/navpic1.gif" /> </a>
+					</div>
+					<div class="navword1">
+						<a href="" style="color:#545048;font-family:'黑体';font" id="topid2">书籍资料</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href=""><img src="img/index/navpic2.gif" /> </a>
+					</div>
+					<div class="navword2">
+						<a href="" style="color:#545048;font-family:'黑体';font" id="topid2">电子产品</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href=""><img src="img/index/navpic3.gif" /> </a>
+					</div>
+					<div class="navword3">
+						<a href="" style="color:#545048;font-family:'黑体';font" id="topid2">运动装备</a>
+					</div>
+				</li>
+				<li>
+					<div>
+						<a href=""><img src="img/index/navpic4.gif" /> </a>
+					</div>
+					<div class="navword4">
+						<a href="" style="color:#545048;font-family:'黑体';font" id="topid2">生活用品</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="blk1"></div>
+		<div class="trd1" style="font-family: '黑体'">
+			<div style="margin-left: 10px;margin-top: 20px;float: left;">
+				<a href=""><img src="img/index/trangle.gif" /> </a>
+			</div>
+			<div style="width:70px;height:63px;float:left;"></div>
+			<div class="trdpic1">
+				<a href=""><img src="img/index/trendpic1.gif" /> </a>
+			</div>
+			<div style="width:70px;height:63px;float:left;"></div>
+			<div class="trd2">
+				<div style="width: 100px;height: 10px;"></div>
+				<ul>
+					<li><div id="topid2">三星GT9100</div>
+					</li>
+					<li><div id="trdli1">二分钟前</div>
+					</li>
+				</ul>
+			</div>
+			<div style="width:50px;height:63px;float:left;"></div>
+			<div class="trd2">
+				<div style="width: 100px;height: 10px;"></div>
+				<ul>
+					<li><div id="topid2">不修不退</div>
+					</li>
+					<li><div id="trdli1">交易成功</div>
+					</li>
+				</ul>
+			</div>
+			<div style="width:40px;height:63px;float:left;"></div>
+			<div class="trd2">
+				<div style="width: 100px;height: 10px;"></div>
+				<ul>
+					<li><div style="color: white;" id="topid2">1788元</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div style="width: 1004px;height: 40px;"></div>
+		<div class="art_tlt">
+			<div class="art1">
+				<ul>
+					<li style="margin-top: 25px;"><a href="">1.要写边框来测试的话一般都在ie里面来测试来测试</a>
+					</li>
+					<li><a href="">1.要写边框来测试的话一般都在ie里面来测试来测试</a>
+					</li>
+					<li><a href="">2.要写边框来测试的话一般都在ie里面来测试来测试</a>
+					</li>
+					<li><a href="">3,要写边框来测试的话一般都在ie里面来测试来测试</a>
+					</li>
+					<li><a href="">4.要写边框来测试的话一般都在ie里面来测试来测试</a>
+					</li>
+					<li><a href="">5.要写边框来测试的话一般都在ie里面来测试来测试</a>
+					</li>
+				</ul>
+			</div>
+			<div class="blk2"></div>
+			<div class="weibo">
+				<a href=""><img src="img/index/weibo.gif"
+					style="margin-top: 42px;margin-left: 10px;float: left;" /> </a><a
+					href=""><img src="img/index/weixin.gif"
+					style="margin-top: 5px;margin-left: 5px;float: left;" /> </a>
+			</div>
+			<div class="blk2"></div>
+			<div class="tlt">
+				<div class="art1">
+					<ul>
+						<li style="margin-top: 25px;"><a href="">1.要写边框来测试的话一般都在ie里面来测试来测试</a>
+						</li>
+						<li><a href="">1.要写边框来测试的话一般都在ie里面来测试来测试</a>
+						</li>
+						<li><a href="">2.要写边框来测试的话一般都在ie里面来测试来测试</a>
+						</li>
+						<li><a href="">3,要写边框来测试的话一般都在ie里面来测试来测试</a>
+						</li>
+						<li><a href="">4.要写边框来测试的话一般都在ie里面来测试来测试</a>
+						</li>
+						<li><a href="">5.要写边框来测试的话一般都在ie里面来测试来测试</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div style="width: 1004px;height: 42px;"></div>
+		<div class="bod1">
+			<div style="float: left;margin: 30px 0 0 15px;">
+				<a href=""><img src="img/index/lunfan1.gif" /> </a>
+			</div>
+			<ul>
+				<li><a href=""><img src="img/index/bodpic1.gif" /> </a></li>
+				<li><a href=""><img src="img/index/bodpic2.gif" /> </a></li>
+				<li><a href=""><img src="img/index/bodpic3.gif" /> </a></li>
+				<li><a href=""><img src="img/index/bodpic4.gif" /> </a></li>
+				<li><a href=""><img src="img/index/bodpic5.gif" /> </a></li>
+				<li><a href=""><img src="img/index/bodpic6.gif" /> </a></li>
+			</ul>
+			<div style="float: left;margin-left: 30px;margin-top: 30px;">
+				<a href=""><img src="img/index/lunfan2.gif" /> </a>
+			</div>
+		</div>
+		<div style="width: 1004px;height: 86px;"></div>
+		<div id="layout4">
+			<!-- 这里因为之前思路的原因，修改不好，所以直接引用livinggoods的这个id -->
+			<div class="herf1">
+				<div style="width: 100px;height: 15px;"></div>
+				<div>
+					<table class="herftable1" width="80%" height="80%"
+						cellspacing="0px" style="margin-left: 150px;">
+						<tr>
+							<td width="8%"><a href="">中关村</a></td>
+							<td width="10%"><a href="">拉手网</a></td>
+							<td width="10%"><a href="">58同城</a></td>
+							<td width="10%"><a href="">新浪NBA</a></td>
+							<td width="10%"><a href="">赶集网</a></td>
+							<td width="10%"><a href="">二手市场</a></td>
+							<td width="10%"><a href="">二手车</a></td>
+							<td width="10%"><a href="">二手房</a></td>
+							<td width="8%"><a href="">加油网</a></td>
+							<td><a href="">北京</a></td>
+						</tr>
+						<tr>
+							<td width="8%"><a href="">中关村</a></td>
+							<td width="10%"><a href="">拉手网</a></td>
+							<td width="10%"><a href="">58同城</a></td>
+							<td width="10%"><a href="">新浪NBA</a></td>
+							<td width="10%"><a href="">赶集网</a></td>
+							<td width="10%"><a href="">二手市场</a></td>
+							<td width="10%"><a href="">二手车</a></td>
+							<td width="10%"><a href="">二手房</a></td>
+							<td width="8%"><a href="">加油网</a></td>
+							<td><a href="">北京</a></td>
+						</tr>
+						<tr>
+							<td width="8%"><a href="">中关村</a></td>
+							<td width="10%"><a href="">拉手网</a></td>
+							<td width="10%"><a href="">58同城</a></td>
+							<td width="10%"><a href="">新浪NBA</a></td>
+							<td width="10%"><a href="">赶集网</a></td>
+							<td width="10%"><a href="">二手市场</a></td>
+							<td width="10%"><a href="">二手车</a></td>
+							<td width="10%"><a href="">二手房</a></td>
+							<td width="8%"><a href="">加油网</a></td>
+							<td><a href="">北京</a></td>
+						</tr>
+						<tr>
+							<td width="8%"><a href="">中关村</a></td>
+							<td width="10%"><a href="">拉手网</a></td>
+							<td width="10%"><a href="">58同城</a></td>
+							<td width="10%"><a href="">新浪NBA</a></td>
+							<td width="10%"><a href="">赶集网</a></td>
+							<td width="10%"><a href="">二手市场</a></td>
+							<td width="10%"><a href="">二手车</a></td>
+							<td width="10%"><a href="">二手房</a></td>
+							<td width="8%"><a href="">加油网</a></td>
+							<td><a href="">北京</a></td>
+						</tr>
+						<tr>
+							<td width="8%"><a href="">中关村</a></td>
+							<td width="10%"><a href="">拉手网</a></td>
+							<td width="10%"><a href="">58同城</a></td>
+							<td width="10%"><a href="">新浪NBA</a></td>
+							<td width="10%"><a href="">赶集网</a></td>
+							<td width="10%"><a href="">二手市场</a></td>
+							<td width="10%"><a href="">二手车</a></td>
+							<td width="10%"><a href="">二手房</a></td>
+							<td width="8%"><a href="">加油网</a></td>
+							<td><a href="">北京</a></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="cpy1">
+				<div style="height: 23px;">
+					<div style="width:350px;height: 15px;float: left;"></div>
+					<div style="float: left;" class="cpy2">CopyRight © 2013 &nbsp
+						梦之站 &nbsp All Right Reserved</div>
+				</div>
+				<div style="height: 23px;">
+					<div style="width:400px;height: 15px;float: left;"></div>
+					<div style="float: left;" class="cpy3">
+						长理跳蚤市场 &nbsp 版权所有 &nbsp <a href="" style="color: white;">联系我们</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

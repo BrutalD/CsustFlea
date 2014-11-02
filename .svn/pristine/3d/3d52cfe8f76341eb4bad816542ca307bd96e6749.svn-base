@@ -1,0 +1,48 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="<%=basePath%>">
+
+<title>My JSP 'mainPage.jsp' starting page</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+
+<link rel="stylesheet" type="text/css"
+	href="css/myMarket/iframe/mainPage.css">
+
+</head>
+
+<body>
+	<div class="mainPageLayout">
+		<div class="mainPageTop">
+			<div class="mainPageImg">
+				<img src="img/myMarket/people.gif">
+			</div>
+			<div class="mainPageMessage">
+				<div class="mainPageShowMessage">
+					用户名<br />
+					<img src="img/myMarket/line.gif">
+					<br/>
+					<div style="float:left; font-size: 14px;">您的积分总数:</div><div class="showPoint">100</div>
+					<br/><br/>
+					<div style="float:left; font-size: 14px; " ><a href="#">提到我的(3)</a>&nbsp;&nbsp;<a href="#">我参与的(10)</a>&nbsp;&nbsp;<a href="#">技术文章(2)</a></div>
+				</div>
+			</div>
+		</div>
+		<div class="mainPageMiddle">我的发布<br/><div style="background-color: #EAE6E6; width:440px ;height: 126px;"></div></div>
+		<div class="mainPageDown">我的收藏<br/><div style="background-color: #EAE6E6; width: 440px;height:126px;"></div></div>
+	</div>
+</body>
+</html>

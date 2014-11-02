@@ -1,0 +1,37 @@
+@CHARSET "UTF-8";
+
+.blk1{
+	width:1004px;
+	height: 97px;
+}
+.blk2{
+	width:7px;
+	height: 152px;
+	float: left;
+}
+.blk3{
+	width:480px;
+	height: 25px;
+	float: left;
+}
+.blk4{
+	height:25px;
+	width:35px;
+	float: left;
+}
+.blk5{
+	height:25px;
+	width:35px;
+	float: left;
+}
+.blk6{
+	height:25px;
+	width:34px;
+	float: left;
+}
+.blk7{
+	width:505px;
+	height:33px;
+	margin-top:70px;
+	float: left;
+}

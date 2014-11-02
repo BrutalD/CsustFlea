@@ -1,0 +1,134 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<%@ taglib uri="/struts-tags" prefix="s"  %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="<%=basePath%>">
+
+<title>My JSP 'technicistScore.jsp' starting page</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<link rel="stylesheet" href="css/myMarket/iframe/technicistScore.css"
+	type="text/css"></link>
+</head>
+
+<body>
+	<div class="mainPageLayout">
+		<div
+			style="color: #18528C;width:100px;height:25px;padding-top: 10px;padding-left: 10px;font-size: 18px;">未评分预约</div>
+		<div
+			style="width:489px;height:134px;background-image: url('img/myMarket/technicaScore_bg1.gif');margin-left: 12px;font-size: 20px;">
+			<div style="width:489px;height:48px;float: left;padding-top: 8px;">
+				<div style="float: left;color: #18528C;">&nbsp13.7.1&nbsp预约</div>
+				<div style="float: left;margin-left: 6px;width:180px;">立白歌手我是洗衣液</div>
+				<div style="float: left;margin-left: 10px;color:red;">完成</div>
+			</div>
+			<div style="margin-top: 3px;width:489px;height:40px;clear: both;">
+				<div
+					style="float:left;color: #18528C;padding-left: 12px;margin-top: 4px;">给</div>
+				<div style="float:left;margin-top: 4px;">立白歌手我是洗衣液</div>
+				<div style="float:left;color: #18528C;margin-top: 4px;">评分:</div>
+				<div style="float:left;">
+					<input type="text" style="widtH:86px;height:26px;" />
+				</div>
+			</div>
+			<div style="padding-left: 203px;clear: both;">
+				<input type="submit" value="提交评分" />
+			</div>
+
+		</div>
+		<div
+			style="width:489px;height:134px;background-image: url('img/myMarket/technicaScore_bg1.gif');margin-left: 12px;font-size: 20px;">
+			<div style="width:489px;height:48px;float: left;padding-top: 8px;">
+				<div style="float: left;color: #18528C;">&nbsp13.7.1&nbsp预约</div>
+				<div style="float: left;margin-left: 6px;width:180px;">立白歌手我是洗衣液</div>
+				<div style="float: left;margin-left: 10px;color:red;">完成</div>
+			</div>
+			<div style="margin-top: 3px;width:489px;height:40px;clear: both;">
+				<div
+					style="float:left;color: #18528C;padding-left: 12px;margin-top: 4px;">给</div>
+				<div style="float:left;margin-top: 4px;">立白歌手我是洗衣液</div>
+				<div style="float:left;color: #18528C;margin-top: 4px;">评分:</div>
+				<div style="float:left;">
+					<input type="text" style="widtH:86px;height:26px;" />
+				</div>
+			</div>
+			<div style="padding-left: 203px;clear: both;">
+				<input type="submit" value="提交评分" />
+			</div>
+
+		</div>
+		<div
+			style="width:489px;height:134px;background-image: url('img/myMarket/technicaScore_bg1.gif');margin-left: 12px;font-size: 20px;">
+			<div style="width:489px;height:48px;float: left;padding-top: 8px;">
+				<div style="float: left;color: #18528C;">&nbsp13.7.1&nbsp预约</div>
+				<div style="float: left;margin-left: 6px;width:180px;">立白歌手我是洗衣液</div>
+				<div style="float: left;margin-left: 10px;color:red;">完成</div>
+			</div>
+			<div style="margin-top: 3px;width:489px;height:40px;clear: both;">
+				<div
+					style="float:left;color: #18528C;padding-left: 12px;margin-top: 4px;">给</div>
+				<div style="float:left;margin-top: 4px;">立白歌手我是洗衣液</div>
+				<div style="float:left;color: #18528C;margin-top: 4px;">评分:</div>
+				<div style="float:left;">
+					<input type="text" style="widtH:86px;height:26px;" />
+				</div>
+			</div>
+			<div style="padding-left: 203px;clear: both;">
+				<input type="submit" value="提交评分" />
+			</div>
+		</div>
+
+		<div
+			style="color: #18528C;width:150px;height:25px;padding-top: 10px;margin-left: 10px;font-size: 18px;clear: both;">已评分预约</div>
+		<div
+			style="width:489px;height:3px;margin-left: 10px;background-image: url('img/myMarket/technicaScore_bg2.gif');"></div>
+		<div
+			style="height:62px;font-size: 20px;margin-left: 12px;margin-top: 5px;">
+			<div style="float: left;color: #18528C;">&nbsp13.7.1&nbsp预约</div>
+			<div style="float: left;margin-left: 6px;width:180px;">立白歌手我是洗衣液</div>
+			<div style="float: left;margin-left: 10px;color:red;">完成</div>
+			<div style="clear:both;">
+				<div
+					style="float:left;color: #18528C;padding-left: 12px;padding-top: 10px;">给</div>
+				<div style="float:left;padding-top: 10px;">立白歌手我是洗衣液</div>
+				<div style="float:left;color: #18528C;padding-top: 10px;">评分:</div>
+			</div>
+		</div>
+
+
+		<div
+			style="width:489px;height:3px;margin-left: 10px;background-image: url('img/myMarket/technicaScore_bg2.gif');"></div>
+		<div
+			style="height:62px;font-size: 20px;margin-left: 12px;margin-top: 5px;">
+			<div style="float: left;color: #18528C;">&nbsp13.7.1&nbsp预约</div>
+			<div style="float: left;margin-left: 6px;width:180px;">立白歌手我是洗衣液</div>
+			<div style="float: left;margin-left: 10px;color:red;">完成</div>
+			<div style="clear:both;">
+				<div
+					style="float:left;color: #18528C;padding-left: 12px;padding-top: 10px;">给</div>
+				<div style="float:left;padding-top: 10px;">立白歌手我是洗衣液</div>
+				<div style="float:left;color: #18528C;padding-top: 10px;">评分:</div>
+			</div>
+		</div>
+
+		<div
+			style="width:489px;height:3px;margin-left: 10px;background-image: url('img/myMarket/technicaScore_bg2.gif');"></div>
+        <div style="margin-left:80px;margin-top: 20px; "><s:a href="">上一页</s:a>&nbsp<s:a href="">首页</s:a>&nbsp<s:a href="">1</s:a>&nbsp<s:a
+					href="">2</s:a>&nbsp<s:a href="">3</s:a>&nbsp<s:a href="">4</s:a>&nbsp<s:a
+					href="">5</s:a>&nbsp<s:a href="">6</s:a> ...&nbsp<s:a href="">尾页</s:a>&nbsp<s:a
+					href="">下一页</s:a></div>
+
+	</div>
+</body>
+</html>

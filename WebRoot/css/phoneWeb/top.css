@@ -1,0 +1,53 @@
+@CHARSET "UTF-8";
+/*此处全部用于顶部模块也就是LAYOUT1的CSS*/
+
+/*用于设置左边的LOGO部分*/
+.topleft {
+	float: left;
+	width: 327px;
+	height: 112px;
+}
+
+/*用于设置右边的切换功能*/
+.topright {
+	float: right;
+	width: 673px;
+	height: 112px;
+}
+
+.topChoose li {
+	float: left;
+	width: 125px;
+	height: 80px;
+	margin-left: 40px;
+	line-height: 80px;
+	font-size: 16px;
+	font-family: "黑体";
+}
+
+#layout1 ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.topBlank {
+	height: 32px;
+}
+
+.topChoose li a {
+	margin-left: 25px;
+	text-decoration: none;
+}
+
+.noselected a {
+	color: black;
+}
+
+.selected {
+	background-image: url(../../img/phoneWeb/choose.gif);
+}
+
+.selected a {
+	color: white;
+}

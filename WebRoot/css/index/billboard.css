@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+.bod1{
+	margin-left: 87px;
+	height: 110px;
+	width:840px;
+}
+
+.bod1 ul li{
+	list-style: none;
+	float: left;
+	width: 102px;
+	height: 101px;
+	margin-left: 15px;
+}
+.bod1 ul li img{
+	width: 102px;
+	height: 101px;
+}

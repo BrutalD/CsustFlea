@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+
+body,html {
+	width: 1004px;
+	padding: 0px;
+	margin: 0px auto;
+	text-align: center;
+	font-family: 黑体;
+}
+
+a{
+	text-decoration: none;
+}
+img {
+	border: 0px;
+}
+
+#layout {
+	text-align: left;
+	width: 1004px;
+	height: 883px;
+	background-image: url(../../img/phoneWeb/bgimg.png);
+}
+
+#layout1 {
+	height: 112px;
+	width: 1004px;
+	background-image: url(../../img/phoneWeb/topbgimg.gif);
+}
+
+#layout2 {
+	height: 620px;
+	width: 1004px;
+}
+
+#layout3 {
+	height: 151px;
+	width: 1004px;
+}
+
+.font1{
+	font-size: 16px;
+	font-family: "黑体";
+}
+
+.font2{
+	font-size: 14px;
+	font-family: "黑体";
+}

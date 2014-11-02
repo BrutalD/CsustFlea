@@ -1,0 +1,40 @@
+package com.csustflea.action;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+import org.hibernate.sql.Update;
+import org.springframework.stereotype.Component;
+
+import com.csustflea.model.User;
+import com.csustflea.service.UserService;
+import com.opensymphony.xwork2.ActionSupport;
+
+@Component
+public class UpdatePwdAction extends ActionSupport {
+	
+	private UserService userservice;
+
+	public UserService getUserservice() {
+		return userservice;
+	}
+    
+	@Resource
+	public void setUserservice(UserService userservice) {
+		this.userservice = userservice;
+	}
+	
+	@Override
+	public String execute() throws Exception {
+		HttpServletRequest request = ServletActionContext.getRequest();
+		HttpSession session1 = request.getSession();
+		User uUpdate = (User)session1.getAttribute("logUserTemp");
+		int idTemp = uUpdate.getId();
+		String usernameTemp = uUpdate.getUsername();
+		String pwdTemp = (String)session1.getAttribute("updatePwd");
+		this.userservice.updatePwd(idTemp,usernameTemp,pwdTemp);
+		return SUCCESS;
+	}
+}

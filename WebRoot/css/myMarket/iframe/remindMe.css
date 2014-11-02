@@ -1,0 +1,117 @@
+@CHARSET "UTF-8";
+
+body,html {
+	width: 508px;
+	height: 667px;
+	margin: 0px auto;
+	padding: 0px;
+	font-family: 黑体;
+	text-align: center;
+	overflow: hidden;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+img {
+	border: 0px;
+}
+
+.mainPageLayout {
+	width: 525px;
+	height: 667px;
+	text-align: left;
+	background-image: url(../../../img/myMarket/mainPage.gif);
+	overflow: auto;
+}
+
+.goodsDiv{
+	width:500px;
+	height:16px;
+	padding-left:6px;
+	padding-top:5px;
+	font-size:16px;
+	color:#316091;
+	font-family:'黑体';
+}
+
+.goodsMain{
+	width:484px;
+	height:61px;
+	background-image: url(../../../img/myMarket/iJoined_bg1.gif);
+	margin-left: 11px;
+	margin-top: 4px;
+}
+
+.lMessage{
+	width:500px;
+	height:16px;
+	padding-left:6px;
+	padding-top:5px;
+	font-size:16px;
+	color:#316091;
+	font-family:'黑体';
+}
+
+.lMessageMain{
+	width:484px;
+	margin-left: 11px;
+	margin-top: 4px;
+	background-image: url(../../../img/myMarket/iJoined_bg2.gif);
+}
+
+.goodsMainLeft{
+	width:230px;
+	height:32px;
+	font-size:24px;
+	font-family:'黑体';
+	padding-left:5px;
+	padding-top:5px;
+	float: left;
+}
+
+.goodsMainType{
+	height:32px;
+	color:#316091;
+	font-size:14px;
+	font-family:'黑体';
+	float: left;
+}
+
+.goodsMainPrice{
+	margin-left:5px;
+	height:32px;
+	color:#316091;
+	font-size:14px;
+	font-family:'黑体';
+	float: left;
+}
+
+.goodsContent{
+	height:32px;
+	font-size:14px;
+	font-family:'黑体';
+	float: left;
+}
+
+.goodsTime{
+	color:#316091;
+	font-size:14px;
+	font-family:'黑体';
+	margin-left: 410px;
+}
+
+.lMessageCon{
+	color:#316091;
+	font-size:14px;
+	font-family:'黑体';
+}
+
+.lMessageAns{
+	color:#316091;
+	font-size:14px;
+	font-family:'黑体';
+}

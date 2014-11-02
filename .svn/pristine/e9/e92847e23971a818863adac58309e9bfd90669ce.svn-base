@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.objectFactory" value="spring" />
+	<include file="struts-default.xml" />
+	<package name="csustflea" extends="struts-default">
+
+		<action name="RegUser" class="regUserAction">
+			<result name="success">/page/util/login.jsp</result>
+			<result name="false">page/util/regFail.jsp</result>
+		</action>
+
+		<action name="LogUser" class="logUserAction">
+			<result name="success">/page/myMarket.jsp</result>
+			<result name="failure">/page/util/loginFail.jsp</result>
+
+		</action>
+
+		<action name="listUserInfo" class="listUserInfoAction">
+			<result name="success">/page/myMarket/basicInformation.jsp</result>
+		</action>
+
+		<action name="CheckUserPwd" class="checkUserPwdAction">
+			<result name="success" type="redirect">/UpdatePwd.action</result>
+			<result name="failure">/index.jsp</result>
+		</action>
+
+		<action name="UpdatePwd" class="updatePwdAction">
+			<result name="success" type="redirect">/page/myMarket/changePassword.jsp
+			</result>
+		</action>
+
+		<action name="CpUser_*" class="cpUserAction" method="{1}">
+			<result name="success" type="redirect">/listUserInfo.action</result>
+		</action>
+
+		<action name="picUpdate" class="picUpdate">
+			<result name="success">/index.jsp</result>
+		</action>
+
+
+		<action name="searchGoods_*" class="searchAction" method="{1}">
+		    <result name="limit" type="redirect">/searchGoods_list.action</result>
+		    <result name="list">/page/search.jsp</result>
+		</action>
+
+		<action name="getGoods_*" class="listGoodsAction" method="{1}">
+			<result name="living">/page/livingGoods.jsp</result>
+			<result name="getone">/page/singleGoods.jsp</result>
+		</action>
+
+		<action name="PostGoods_*" class="postGoodsAction" method="{1}">
+			<result name="list">/page/myMarket/postMessageUtil.jsp</result>
+			<result name="success">/page/myMarket/postMessage.jsp</result>
+		</action>
+
+		<action name="ListGoodsMan_*" class="listGoodsManAction"
+			method="{1}">
+			<result name="limit" type="redirect">/ListGoodsMan_list.action</result>
+			<result name="list">/page/myMarket/goodsManagement.jsp</result>
+			<result name="delete" type="redirect">/ListGoodsMan_limit.action</result>
+		</action>
+
+		<action name="ListPGoods_*" class="listPGoodsAction" method="{1}">
+			<result name="savepgoods" type="redirect">/ListPGoods_limitpgoods.action
+			</result>
+			<result name="limitpgoods" type="redirect">/ListPGoods_listpgoods.action
+			</result>
+			<result name="listpgoods">/page/myMarket/askToBuy.jsp</result>
+			<result name="deletepgoods" type="redirect">/ListPGoods_limitpgoods.action
+			</result>
+		</action>
+
+		<action name="ListCollection_*" class="listCollectionAction" method="{1}">
+			<result name="listgoods" type="redirect">/ListCollection_list.action</result>
+			<result name="list">/page/myMarket/collectionGoods.jsp</result>
+			<result name="savecgoods" type="redirect">/ListCollection_ListGoods.action</result>
+			<result name="delcgoods" type="redirect">/ListCollection_ListGoods.action</result>
+		</action>
+		
+		<action name="ListIndexPGoods_*" class="listIndexPGoodsAction" method="{1}">
+		  <result name="limit">/page/pleaseGoods.jsp</result>
+		  <result name="search">/page/pleaseGoods.jsp</result>
+		</action>
+	</package>
+</struts>

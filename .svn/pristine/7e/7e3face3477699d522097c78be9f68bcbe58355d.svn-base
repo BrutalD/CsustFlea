@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+
+body,html {
+	width: 1004px;
+	height: 1411px;
+	margin: 0px auto;
+	padding: 0px;
+	font-family: 黑体;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #FFFFFD;
+}
+
+img {
+	border: 0px;
+}
+
+ul,li {
+	margin: 0px;
+	padding: 0px;
+	list-style-type:none;
+}
+
+#layout {
+	width: 1004px;
+	height: 1410px;
+	text-align: left;
+}
+
+#layout1 {
+	height: 208px;
+	width: 1004px;
+	background-image: url(../../img/singleGoods/layout1.gif);
+}
+
+#layout2 {
+	width: 1004px;
+	height: 1012px;
+	background-image: url(../../img/singleGoods/layout2.gif);
+}
+
+
+#layout3 {
+	width: 1004px;
+	height: 190px;
+}

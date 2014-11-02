@@ -1,0 +1,106 @@
+@CHARSET "UTF-8";
+
+.middleTop {
+	width: 1004px;
+	height: 32px;
+}
+
+.middleBlank {
+	width: 10px;
+	float: left;
+	height: 953px
+}
+
+.middleLeft {
+	width: 790px;
+	height: 953px;
+	float: left;
+	
+}
+.middleLeftMain{
+	width: 790px;
+	height:903px;
+}
+
+.middleLeftChangePage{
+	width: 790px;
+	height: 50px;
+	text-align: center;
+	
+}
+.middleLeftChangePage a{
+	color: black;
+}
+
+.middleLeft li {
+	width: 186px;
+	height: 225px;
+	float: left;
+	vertical-align: top;
+}
+
+.middleLeft li img {
+	height: 180px;
+	width: 166px;
+	margin-left: 20px;
+}
+
+
+.middleRight {
+	width: 200px;
+	height: 953px;
+	float: left;
+}
+
+.rightTop {
+	height: 705px;
+	background-color: #FAF7F7;
+	text-align: center;
+}
+
+
+.rightUpMain a{
+	color: black;
+}
+
+.first3 img{
+	width: 132px;
+	height: 171px;
+}
+
+.sortNum{
+	text-align: left;
+	width: 160px;
+	margin-left: 20px;
+}
+
+
+
+.rightDown {
+	height: 211px;
+	margin-top: 11px;
+	background-color: #FAF7F7;
+	text-align: center;
+}
+
+.titleBlank {
+	height: 5px;
+}
+
+.rightTitle {
+	height: 30px;
+}
+
+.rightUpMain {
+	height: 670px;
+}
+
+.rightDown{
+	height: 211px;
+}
+.rightDown li {
+	line-height: 25px;
+}
+.rightDown li a{
+	color: black;
+}

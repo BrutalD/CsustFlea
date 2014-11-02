@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="CsustFlea"
+  id="myeclipse.1373626470385"
+  context-root="/CsustFlea"
+  j2ee-spec="6.0"
+  archive="CsustFlea.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

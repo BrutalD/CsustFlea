@@ -1,0 +1,349 @@
+@CHARSET "UTF-8";
+
+.nonselected {
+	
+}
+
+.nav1 {
+	height: 48px;
+}
+
+.nav2 {
+	height: 160px;
+	width: 1004px;
+	margin-top: 20px;
+}
+
+#nav3 {
+	float: left;
+	margin-left: 27px;
+	width: 73px;
+	height: 43px;
+	line-height: 35px;
+	margin-top: 5px;
+}
+
+#nav4 {
+	float: left;
+	margin-left: 22px;
+	line-height: 35px;
+	width: 73px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+#nav5 {
+	float: left;
+	margin-left: 14px;
+	line-height: 35px;
+	width: 73px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+#nav6 {
+	float: left;
+	margin-left: 10px;
+	line-height: 35px;
+	width: 73px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+#nav7 {
+	float: left;
+	margin-left: 15px;
+	line-height: 35px;
+	width: 40px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+#nav8 {
+	float: left;
+	margin-left: 18px;
+	line-height: 35px;
+	width: 73px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+#nav9 {
+	float: left;
+	margin-left: 25px;
+	line-height: 35px;
+	width: 73px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+a.navherf {
+	color: black;
+	font-family: "黑体" ；
+}
+
+.select {
+	background-image: url('../../img/index/navbg.gif');
+}
+
+.select1 {
+	background-image: url("../../img/index/navbg1.gif");
+}
+
+.select a {
+	color: white;
+}
+
+.select1 a {
+	color: white;
+}
+
+#navlist {
+	
+}
+
+.nav10 li {
+	list-style: none;
+	margin-left: 20px;
+	float: left;
+	width: 170px;
+	height: 155px;
+}
+
+
+.navword1 {
+	margin-top: 15px;
+	margin-left: 45px;
+}
+
+.navword2 {
+	margin-top: -5px;
+	margin-left: 45px;
+}
+
+.navword3 {
+	margin-top: -1px;
+	margin-left: 45px;
+}
+
+.navword4 {
+	margin-top: 3px;
+	margin-left: 45px;
+}
+
+.l1{
+	height:25px;
+	margin-left: 80px;
+	font-family: '黑体';
+	font-size: 16px;
+	color:#585756;
+}
+
+.l1 a{
+	color:#585756;
+}
+
+.l2{
+ width:1004px;
+ height:95px;
+ padding-top:0px;	
+ background-image: url("../../img/pleaseGoods/please_bg3.gif");
+}
+
+.ll1{
+ width:116px;
+ height:95px;	
+ float: left;
+}
+
+.ll2{
+ width:886px;
+ height:95px;	
+ float: left;
+}
+
+.lll1{
+font-family: '黑体';
+font-size: 20px;
+float: left;
+width:75px;
+height:55px;
+}
+
+#lll1{
+font-family: '黑体';
+font-size: 18px;
+}
+
+.lll2{
+width:84px;
+height:55px;
+margin-left:-2px;
+float: left;
+}
+
+.ll21{
+	width:84px;
+    height:39px;
+    margin-top:12px;
+	background-image: url("../../img/pleaseGoods/please_bg4.gif");
+}
+
+.lll3{
+	clear:both;
+	height:40px;
+	margin-left: 71px;
+	padding-top: 8px;
+	font-size: 18px;
+	color: white;
+	font-family: '黑体';
+}
+
+.l3{
+	width:1004px;
+	height:37px;
+	padding-left: 116px;
+	font-size: 16px;
+	font-family: '黑体';
+	padding-top: 15px;
+}
+
+.ll3{
+	float: left;
+	width:68px;
+	height:19px;
+	background-image: url("../../img/pleaseGoods/please_bg6.gif");
+}
+
+.ll4{
+	float: left;
+	width: 68px;
+	height:19px;
+	margin-left:20px;
+	background-image: url("../../img/pleaseGoods/please_bg5.gif");
+}
+.ll5{
+	float: left;
+	width: 40px;
+	height:19px;
+}
+
+.l4{
+	width:869px;
+	height:46px;
+	margin-left:76px;
+	background-image: url("../../img/pleaseGoods/please_bg7.gif");
+}
+
+.l5{
+	margin-top: 26px;
+	margin-left: 315px;
+	font-size: 18px;
+	font-family: '黑体';
+}
+
+.l5 a{
+	color:black;
+}
+
+.l6{
+	margin-top: 21px;
+	margin-left: 417px;
+	font-size: 20px;
+	font-family: '黑体';
+	color:636160;
+}
+
+.singlepleasetitle{
+	width:1000px;
+	height:95px;
+}
+
+.singlepleasetitle1{
+	width:840px;
+	height:35px;
+	margin-left:90px;
+	padding-top:40px;
+	font-size:30px;
+	font-family:'黑体';
+}
+
+.singlepleaseadd{
+	width:1000px;
+	height:56px;
+}
+
+.singlepleaseadd1{
+	width:106px;
+	height:28px;
+	float:left;
+	font-size:20px;
+	margin-left:90px;
+	font-family:'黑体';
+	color:#064281;
+}
+
+.singlepleaseadd2{
+	float:left;
+	font-size:20px;
+	font-family:'黑体';
+}
+
+.singlepleaseprice{
+	width:1000px;
+	height:40px;
+}
+
+.singlepleaseprice1{
+	width:106px;
+	height:28px;
+	float:left;
+	font-size:20px;
+	margin-left:90px;
+	font-family:'黑体';
+	color:#064281;
+}
+
+.singlepleaseprice2{
+	float:left;
+	font-size:24px;
+	font-family:'黑体';
+	color:red;
+}
+
+.singlepleasedescb{
+	width:1000px;
+	height:242px;
+}
+
+.singlepleasedescb1{
+	width:854px;
+	height:203px;
+	margin-left:70px;
+	margin-top:10px;
+	background-image:url("../../img/singlePleaseGoods/singlepleasegoods_bg3.gif");
+}
+
+.singlepleasepeo{
+	width:1000px;
+	height:47px;
+}
+
+.singlepleasepho{
+	width:1000px;
+	height:112px;
+}
+
+.singlepleasetime{
+	width:1000px;
+	height:30px;
+}
+
+.singlepleasetime1{
+	width:190px;
+	height:30px;
+	font-size:16px;
+	margin-left:90px;
+	font-family:'黑体';
+	color:#64635F;
+}

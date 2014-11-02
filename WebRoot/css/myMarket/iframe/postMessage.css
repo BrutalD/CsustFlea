@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+
+body,html {
+	width: 508px;
+	height: 667px;
+	margin: 0px auto;
+	padding: 0px;
+	font-family: 黑体;
+	text-align: center;
+	background-image: url(../../../img/myMarket/mainPage.gif);
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: 0px;
+}
+
+ul,li {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+textarea {
+	resize: none;
+}
+
+.mainPageLayout {
+	width: 508px;
+	height: 667px;
+	text-align: left;
+}
+
+.postBlank {
+	height: 30px;
+}
+
+.selectSort {
+	height: 100px;
+}
+
+.messageDes {
+	height: 235px;
+}
+
+.showMessagePic {
+	height: 150px;
+}
+
+.inputBlank1 {
+	width: 498px;
+	height: 100px;
+	margin-left: 10px;
+}
+
+.inputBlank2 {
+	width: 498px;
+	height: 235px;
+	margin-left: 10px;
+}
+
+.inputBlank3 {
+	width: 498px;
+	height: 150px;
+	margin-left: 10px;
+}
+
+.inputBlank3 img {
+	width: 148px;
+	height: 117px;
+	margin-left: 8px;
+}

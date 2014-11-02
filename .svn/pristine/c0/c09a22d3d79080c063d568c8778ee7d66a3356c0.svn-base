@@ -1,0 +1,32 @@
+package com.csustflea.dao;
+
+import java.util.List;
+
+import com.csustflea.model.Collection;
+import com.csustflea.model.Goods;
+import com.csustflea.model.PGoods;
+
+public interface GoodsDao {
+	public int getAllGoodsNumber(String hql);
+
+	public List<Goods> getAllGoods(int startIndex, int pageSize, String hql);
+
+	public void addGoods(Goods goods);
+	
+	public Goods getGoodsById(String hql);
+	
+	public void CpGoodsInfo(Goods goods);
+	
+	public Goods CpGoodsPic(Goods goods);
+	
+	public List<Goods> ListGoodsMan(int pagesize,int pageindex,int uid);
+	
+	public List<Goods> ListPGoods(int pagesize,int pageindex,int uid);
+	
+	public List<Collection> ListCollection(int pagesize,int pageindex,int uid);
+	
+	public List<PGoods> ListIndexPGoods(int pagesize,int pageindex);
+	
+	public List<PGoods> ListIndexsearch(int startIndex, int pageSize, String hql);
+	
+}

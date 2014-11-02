@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+body,html{
+	width:1004px;
+	height:1247px;
+	padding:0px;
+	margin: 0px auto;          /*设置居中  */
+	text-align:center;         /*兼容性更好  */
+	font-family: 黑体;
+}
+.bg{
+  height: 1247px;
+  width:1004px;
+  text-align:left;
+  background-repeat: no-repeat;
+}
+
+
+.layout1{
+	height: 200px;
+	width: 1004px;
+	background-image: url(../../img/singlePleaseGoods/singlepleasegoods_bg1.gif);
+}
+
+a{
+	color: #FFFFFD;
+	text-decoration: none;
+}
+
+.layout2{
+    width: 1004px;
+	height: 858px;
+	background-image: url(../../img/singlePleaseGoods/singlepleasegoods_bg2.gif);
+}
+
+.layout21{
+	width: 1004px;
+	height: 858px;
+}

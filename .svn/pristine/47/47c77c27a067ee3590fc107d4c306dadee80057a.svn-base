@@ -1,0 +1,322 @@
+@CHARSET "UTF-8";
+
+.nonselected {
+	
+}
+
+.nav1 {
+	height: 48px;
+}
+
+.nav2 {
+	height: 160px;
+	width: 1004px;
+	margin-top: 20px;
+}
+
+#nav3 {
+	float: left;
+	margin-left: 27px;
+	width: 73px;
+	height: 43px;
+	line-height: 35px;
+	margin-top: 5px;
+}
+
+#nav4 {
+	float: left;
+	margin-left: 22px;
+	line-height: 35px;
+	width: 73px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+#nav5 {
+	float: left;
+	margin-left: 14px;
+	line-height: 35px;
+	width: 73px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+#nav6 {
+	float: left;
+	margin-left: 10px;
+	line-height: 35px;
+	width: 73px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+#nav7 {
+	float: left;
+	margin-left: 15px;
+	line-height: 35px;
+	width: 40px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+#nav8 {
+	float: left;
+	margin-left: 18px;
+	line-height: 35px;
+	width: 73px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+#nav9 {
+	float: left;
+	margin-left: 25px;
+	line-height: 35px;
+	width: 73px;
+	height: 43px;
+	margin-top: 5px;
+}
+
+a.navherf {
+	color: black;
+	font-family: "黑体" ；
+}
+
+.select {
+	background-image: url('../../img/index/navbg.gif');
+}
+
+.select1 {
+	background-image: url("../../img/index/navbg1.gif");
+}
+
+.select a {
+	color: white;
+}
+
+.select1 a {
+	color: white;
+}
+
+#navlist {
+	
+}
+
+.nav10 li {
+	list-style: none;
+	margin-left: 20px;
+	float: left;
+	width: 170px;
+	height: 155px;
+}
+
+
+.navword1 {
+	margin-top: 15px;
+	margin-left: 45px;
+}
+
+.navword2 {
+	margin-top: -5px;
+	margin-left: 45px;
+}
+
+.navword3 {
+	margin-top: -1px;
+	margin-left: 45px;
+}
+
+.navword4 {
+	margin-top: 3px;
+	margin-left: 45px;
+}
+.l1{
+	width:640px;
+	height:1205px;
+	float: left;
+}
+
+.l2{
+	width:324px;
+	height:1205px;
+	float: left;
+}
+
+.l3{
+	width:24px;
+	height:1205px;
+	float: left;
+}
+
+.article1{
+	width:633px;
+	height:28px;
+	background-image: url("../../img/repairPrefecture/repair_bg1.gif");
+	margin-top: 15px;
+}
+
+.article2{
+	width:626px;
+	height:292px;
+	background-image: url("../../img/repairPrefecture/repair_bg3.gif");
+	margin-top: 25px;
+	margin-left: 12px;
+}
+
+.article3{
+	height:89px;
+	margin-left: 12px;
+}
+
+.articleimg{
+	float: left;
+}
+
+.articleimg img{
+	width:89px;
+	height:89px;
+}
+
+.articlewords{
+	width:520px;
+	height:89px;
+	float:left;
+}
+
+.articleperson{
+	width:190px;
+	height:43px;
+	float: left;
+	margin-left: 5px;
+}
+
+.articleperson1{
+	font-size: 18px;
+	font-size: '黑体';
+	padding-top: 22px;
+}
+
+.articletype{
+  float: left;
+  padding-top: 27px;
+  font-size: 14px;
+  font-size: '微软雅黑';
+  color: #49739E;
+}
+
+.articletitle{
+ width:430px;
+ height:40px;	
+ font-size: 22px;
+ font-size: '黑体';
+ margin-left: 5px;	
+ float: left;
+}
+
+.articletitle1{
+ padding-top: 12px;
+}
+
+.articletitle2{
+	float: left;
+	margin-top: 8px;
+	font-family: '黑体';
+	font-size:14px;
+	color: #49739E;
+}
+
+.articlebody{
+	width:582px;
+	height:170px;
+	clear: both;
+	font-family: '黑体';
+	font-size:14px;
+	line-height: 20px;
+}
+
+.articleother{
+	width:582px;
+	height: 22px;
+	clear: both;
+	font-family: '黑体';
+	font-size:12px;
+	color: #49739E;
+}
+
+.articleother1{
+  padding-left: 450px;	
+  padding-top: 4px;	
+}
+
+.repairman1{
+	width:322px;
+	height:28px;
+	background-image: url("../../img/repairPrefecture/repair_bg2.gif");
+	margin-top: 15px;
+}
+
+.repairmanbody{
+	width:322px; 
+	height:177px;
+	margin-top:20px;
+	background-image: url("../../img/repairPrefecture/repair_bg4.gif");
+}
+
+.repairtop{
+	width:295px;
+	height:82px;
+	margin-left: 10px;
+}
+
+.repairimg{
+	float: left;
+}
+
+.repairimg img{
+	width:82px;
+	height:82px;
+}
+
+.repairtopword{
+	width:210px;
+	height:82px;
+	float: left;
+}
+
+.repairtopword1{
+	height:20px;
+	font-family: '黑体';
+	font-size:18px;
+}
+
+.repairtopword2{
+	height:56px;
+	border:solid #EFEEE7 1px;
+	font-family: '黑体';
+}
+
+.repairtopword4{
+  margin-top: 20px;
+}
+
+.repairtopword5{
+  margin-top: 40px;
+}
+
+.repairbottem{
+	height:70px;
+	margin-left: 10px;
+}
+
+.repairbottemwords{
+	font-family: '黑体';
+	font-size:14px;
+	color: #49739E;
+	float: left;
+}
+
+.repairbottemwords1{
+	font-family: '黑体';
+	font-size:14px;
+	float: left;
+}

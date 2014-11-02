@@ -1,0 +1,77 @@
+package com.csustflea.model;
+
+public class Technician {
+	private int id;
+	private int uid;
+	private int score;
+	private String intorduce;
+	private int amount;
+	private double price;
+	private String aspect;
+	private int scorenum;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getUid() {
+		return uid;
+	}
+
+	public void setUid(int uid) {
+		this.uid = uid;
+	}
+
+	public int getScore() {
+		return score;
+	}
+
+	public void setScore(int score) {
+		this.score = score;
+	}
+
+	public String getIntorduce() {
+		return intorduce;
+	}
+
+	public void setIntorduce(String intorduce) {
+		this.intorduce = intorduce;
+	}
+
+	public int getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int amount) {
+		this.amount = amount;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public String getAspect() {
+		return aspect;
+	}
+
+	public void setAspect(String aspect) {
+		this.aspect = aspect;
+	}
+
+	public int getScorenum() {
+		return scorenum;
+	}
+
+	public void setScorenum(int scorenum) {
+		this.scorenum = scorenum;
+	}
+
+}

@@ -1,0 +1,8 @@
+@CHARSET "UTF-8";
+
+.rot1{
+	height: 412px;
+	width:1004px;
+	border: 1px solid  red;
+	border-color: transparent;
+}

@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+body,html{
+	width:1004px;
+	height:1568px;
+	padding:0px;
+	margin: 0px auto;          /*设置居中  */
+	text-align:center;         /*兼容性更好  */
+	font-family: 黑体;
+}
+
+.bg{
+  background-image: url("../../img/index/bg.png");
+  height: 1568px;
+  width:1004px;
+  text-align:left;
+  background-repeat: no-repeat;
+}
+
+a{
+	color: #FFFFFD;
+	text-decoration: none;
+}
+img{
+	border: 0px;
+}
+

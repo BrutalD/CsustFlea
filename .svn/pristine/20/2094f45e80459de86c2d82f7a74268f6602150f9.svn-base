@@ -1,0 +1,54 @@
+@CHARSET "UTF-8";
+
+body,html {
+	width: 1004px;
+	height: 1569px;
+	margin: 0px auto;
+	padding: 0px;
+	font-family: 黑体;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	color: #FFFFFD;
+}
+
+img {
+	border: 0px;
+}
+
+ul,li {
+	margin: 0px;
+	padding: 0px;
+	list-style-type:none;
+}
+
+#layout {
+	width: 1004px;
+	height: 1569px;
+	text-align: left;
+}
+
+#layout1 {
+	height: 208px;
+	width: 1004px;
+	background-image: url(../../img/livingGoods/layout1.gif);
+}
+
+#layout2 {
+	width: 1004px;
+	height: 186px;
+	background-image: url(../../img/livingGoods/layout2.gif);
+}
+
+#layout3 {
+	width: 1004px;
+	height: 985px;
+	background-image: url(../../img/livingGoods/layout3.gif);
+}
+
+#layout4 {
+	width: 1004px;
+	height: 190px;
+}

@@ -1,0 +1,19 @@
+@CHARSET "UTF-8";
+
+body,html {
+	width: 508px;
+	height: 667px;
+	margin: 0px auto;
+	padding: 0px;
+	font-family: 黑体;
+	text-align: center;
+}
+
+.mainPageLayout {
+	width: 508px;
+	height: 667px;
+	text-align: left;
+	background-image: url(../../../img/myMarket/mainPage.gif);
+	font-size: 20px;
+	color:black;
+}

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.devMode" value="true"></constant>
+	<constant name="struts.objectFactory" value="spring" />
+	<include file="struts-default.xml" />
+
+	<package name="csustflea1" extends="json-default" namespace="/test">       <!-- 从action传输json对象到前台 -->
+		<action name="BeTechnicist" class="beTechnicistAction">
+			<result type="json" name="success">
+			</result>
+		</action>
+		<action name="LogUser" class="logUserAction">
+			<result type="json" name="success">
+			</result>
+		</action>
+		<action name="RegUser" class="regUserAction">
+			<result type="json" name="success">
+			</result>
+		</action>
+		<action name="PostTecScore" class="postTecScore">
+			<result type="json" name="success">
+			</result>
+		</action>
+		<action name="CheckApp" class="checkAppAction">
+			<result type="json" name="success">
+			</result>
+		</action>
+		<action name="checkUserPwd" class="checkUserPwdAction">
+			<result type="json" name="success">
+			</result>
+		</action>
+	</package>
+
+	<package name="csustflea" extends="struts-default">
+
+		<action name="RegUser" class="regUserAction">
+			<result name="success">/page/util/login.jsp</result>
+			<result name="false">page/util/regFail.jsp</result>
+		</action>
+
+		<action name="LogUser" class="logUserAction">
+			<result name="success">myMarket.action</result>
+		</action>
+
+		<action name="CheckUserPwd_smd">
+			<result type="chain" name="success">
+				<param name="namespace">/test</param>
+				<param name="actionName">checkUserPwd</param>   <!-- 跨namespace并且保存数据 -->
+			</result>
+		</action>
+
+
+		<action name="CpUser_*" class="cpUserAction" method="{1}">
+		    <result name="list">/page/myMarket/basicInformation.jsp</result>
+			<result name="relist" type="redirect">/CpUser_list.action</result>
+		</action>
+
+		<action name="picUpdate" class="picUpdate">
+			<result name="success">/index.jsp</result>
+		</action>
+
+
+		<action name="searchGoods_*" class="searchAction" method="{1}">
+			<result name="limit">/page/search.jsp</result>
+		</action>
+
+		<action name="getGoods_getGoodsById" class="getgoodsByIdAction">
+			<result name="getone">/page/singleGoods.jsp</result>
+		</action>
+
+		<action name="getGoods_*" class="listGoodsAction">
+			<result name="{1}">/page/nav/{1}.jsp</result>
+		</action>
+
+		<action name="PostGoods_*" class="postGoodsAction" method="{1}">
+			<result name="list">/page/myMarket/postMessageUtil.jsp</result>
+			<result name="success">/page/myMarket/postMessage.jsp</result>
+		</action>
+
+		<action name="ListGoodsMan_*" class="listGoodsManAction"
+			method="{1}">
+			<result name="list">/page/myMarket/goodsManagement.jsp</result>
+			<result name="delete" type="redirect">/ListGoodsMan_list.action</result>
+		</action>
+
+		<action name="ListPGoods_*" class="listPGoodsAction" method="{1}">
+			<result name="savepgoods" type="redirect">/ListPGoods_listpgoods.action
+			</result>
+			<result name="listpgoods">/page/myMarket/askToBuy.jsp</result>
+			<result name="deletepgoods" type="redirect">/ListPGoods_listpgoods.action
+			</result>
+			<result name="listsinglepgoods">/page/singlePleaseGoods.jsp</result>
+		</action>
+
+		<action name="ListCollection_*" class="listCollectionAction"
+			method="{1}">
+			<result name="list">/page/myMarket/collectionGoods.jsp</result>
+			<result name="savecgoods" type="redirect">/ListCollection_ListGoods.action
+			</result>
+			<result name="delcgoods" type="redirect">/ListCollection_ListGoods.action
+			</result>
+		</action>
+
+		<action name="ListIndexPGoods_*" class="listIndexPGoodsAction"
+			method="{1}">
+			<result name="limit">/page/pleaseGoods.jsp</result>
+			<result name="search">/page/pleaseGoods.jsp</result>
+		</action>
+
+		<action name="TechnicArticleAction_*" class="technicArticle"
+			method="{1}">
+			<result name="post">/test.jsp</result>
+			<result name="list">/test.jsp</result>
+			<result name="examin" type="redirect">/TechnicArticleAction_list.action
+			</result>
+			<result name="delete" type="redirect">/TechnicArticleAction_list.action
+			</result>
+		</action>
+		
+		<action name="TechnicistCheckAction_*" class="technicistCheckAction" method="{1}">
+		   <result name="list">/technicist.jsp</result>
+		   <result name="examin" type="redirect">/TechnicistCheckAction_list.action</result>
+		   <result name="delete" type="redirect">/TechnicistCheckAction_list.action</result>
+		</action>
+
+		<action name="repairPrefecture_*" class="repairPrefectureAction"
+			method="{1}">
+			<result name="list">/page/repairPrefecture.jsp</result>
+			<result name="sarticle">/page/singleArticle.jsp</result>
+			<result name="singleperson">/page/singlePerson.jsp</result>
+		</action>
+
+		<action name="BeTechnicist_smd" class="beTechnicistActionSmd">
+			<result name="success" type="redirect">/test/BeTechnicist.action</result>
+		</action>
+
+		<action name="RegUser_smd" class="regUserAction_smd">
+			<result name="success" type="redirect">/test/RegUser.action</result>
+		</action>
+
+		<action name="LogUser_smd" class="logUserAction_smd">
+			<result name="success" type="redirect">/test/LogUser.action</result>
+		</action>
+
+		<action name="Util" class="utilAction">
+			<result name="success">/index.jsp</result>
+		</action>
+
+		<action name="PostTecScore_smd">
+			<result type="chain" name="success">
+				<param name="namespace">/test</param>
+				<param name="actionName">PostTecScore</param>   <!-- 跨namespace并且保存数据 -->
+			</result>
+		</action>
+
+		<action name="CheckFlags">
+			<result type="chain" name="success">
+				<param name="namespace">/test</param>
+				<param name="actionName">CheckApp</param>   <!-- 跨namespace并且保存数据 -->
+			</result>
+		</action>
+
+		<!-- <action name="CheckAppointment1">
+			<result type="redirect">/CheckAppointment_list.action</result>
+		</action> -->
+
+		<action name="CheckAppointment_*" class="checkAppointmentAction"
+			method="{1}">
+			<result name="list">/page/myMarket/checkAppointment.jsp</result>
+		</action>
+
+
+		<action name="TechnicistScore_*" class="technicistScoreAction"
+			method="{1}">
+			<result name="list">/page/myMarket/technicistScore.jsp</result>
+			<result name="postscore" type="redirect">/TechnicistScore_list.action
+			</result>
+		</action>
+		
+		<action name="PostGoodsComments_*" class="postGoodsCommentsAction" method="{1}">
+		  <result name="save">/page/singleGoods.jsp</result>
+		</action>
+		
+		<action name="IJoined_*" class="IJoinedAction" method="{1}">            <!-- 这里不知I为什么要用大写 -->
+		  <result name="list">/page/myMarket/iJoined.jsp</result>
+		  <result name="save" type="redirect">/IJoined_list.action</result>
+		</action>
+		
+		<action name="RemindMe_*" class="remindMeAction" method="{1}">
+		  <result name="list">/page/myMarket/remindMe.jsp</result>
+		  <result name="save" type="redirect">/RemindMe_list.action</result>
+		</action>
+
+		<action name="myMarket" >
+			<result>/page/myMarket.jsp</result>
+		</action>
+		
+ 		<action name="myMarket1" class="myMarketAction">
+			<result name="success">/page/myMarket/mainPage.jsp</result>      <!-- 这里主要是为了实现我的市场页面的mainPage的跳转 -->
+		</action> 
+
+		<action name="*">
+			<result>/page/myMarket/{1}.jsp</result>
+		</action>
+
+	</package>
+
+</struts>

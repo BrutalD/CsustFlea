@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+
+body,html{
+	width:1004px;
+	height:1568px;
+	padding:0px;
+	margin: 0px auto;          /*设置居中  */
+	text-align:center;         /*兼容性更好  */
+	font-family: 黑体;
+}
+.bg{
+  height: 1568px;
+  width:1004px;
+  text-align:left;
+  background-repeat: no-repeat;
+}
+
+
+.layout1{
+	height: 201px;
+	width: 1004px;
+	background-image: url(../../img/pleaseGoods/please_bg1.gif);
+}
+
+a{
+	color: #FFFFFD;
+	text-decoration: none;
+}
+
+.layout2{
+   width: 1004px;
+	height: 1205px;
+	background-image: url(../../img/pleaseGoods/please_bg2.gif);
+}

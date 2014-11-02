@@ -1,0 +1,144 @@
+@CHARSET "UTF-8";
+
+.middleBlank {
+	width: 95px;
+	height: 620px;
+	float: left;
+}
+
+.middleTop {
+	float: left;
+	width: 909px;
+	height: 53px;
+}
+
+.middleMain {
+	float: left;
+	width: 909px;
+	height: 567px;
+}
+
+.DandP {
+	height: 338px;
+	width: 835px;
+}
+
+.download {
+	float: left;
+	width: 215px;
+	height: 338px;
+}
+
+.changeBlank{
+	width: 20px;
+	height: 338px;
+	float: left;
+}
+.changePic {
+	float: left;
+	width: 600px;
+	height: 338px;
+}
+
+
+.DLtable {
+	height: 230px;
+	width: 215px;
+	border: 1px solid black;
+	background-color: white;
+}
+
+.DLtable .needBorder {
+	border: 1px solid black;
+	background-color: white;
+	text-align: center;
+}
+
+.needBorder img,.needBorder div {
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+.TDC {
+	height: 108px;
+}
+
+.TDC ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+	margin-top: 10px;
+}
+
+.TDC  ul li {
+	float: left;
+}
+
+.TDC .TDCli1 {
+	margin-left: 23px;
+}
+
+.TDC .TDCli2 {
+	margin-left: 25px;
+}
+
+.CandP {
+	height: 234px;
+}
+
+.connTable {
+	width: 215px;
+	height: 167px;
+	float: left;
+	border: 1px solid black;
+}
+
+.connTable .needBorder {
+	border: 1px solid black;
+	text-align: center;
+}
+
+.connTable ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.conntable  ul li img {
+	margin-top: 3px;
+}
+
+.parter {
+	float: left;
+	height: 234px;
+	weight: 650px;
+	margin-left: 80px;
+}
+
+.parterWord {
+	font-size: 12px;
+	color: gray;
+	font-family: '黑体';
+}
+
+.parterPic {
+	width: 525px;
+	height: 188px;
+	border: 2px solid black;
+}
+
+.parterPic ul {
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.parterPic li {
+	float: left;
+	margin-left: 20px;
+}
+
+.parterPic li img {
+	margin-top: 0px;
+}
+

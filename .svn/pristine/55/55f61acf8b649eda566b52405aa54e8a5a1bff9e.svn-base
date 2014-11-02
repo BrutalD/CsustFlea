@@ -1,0 +1,55 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="<%=basePath%>">
+
+<title>My JSP 'technicarticle.jsp' starting page</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<!--
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	-->
+<link rel="stylesheet" href="css/myMarket/iframe/technicarticle.css"
+	type="text/css"></link>
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="ckeditor/config.js"></script>
+
+</head>
+
+<body>
+	<div class="mainPageLayout">
+		<form>
+		    <br>
+			<div>
+				<div style="margin-left: 10px;">标题:<input type="text" name="title" style="width:250px;"/></div>
+			</div><br>
+			<div>
+				<textarea cols="80" id="editor1" name="editor1.editor" rows="10">
+      在此添加内容
+     </textarea>
+				<script type="text/javascript">
+					CKEDITOR.replace('editor1', {
+						skin : 'kama',
+						language : 'zh-cn',
+						width : '508' ,
+						height: '420'
+					});
+				</script>
+			</div>
+			<div style="margin-top: 20px;margin-left: 210px;"><input type="submit" value="提交文章" /></div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+package com.csustflea.action;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+
+import org.apache.commons.lang3.Validate;
+import org.apache.struts2.ServletActionContext;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+import com.csustflea.model.User;
+import com.csustflea.service.UserService;
+import com.opensymphony.xwork2.ActionSupport;
+
+@Component
+public class RegUserAction extends ActionSupport {
+	private User user;
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	private UserService userservice;
+
+	public UserService getUserservice() {
+		return userservice;
+	}
+
+	@Resource(name="userservice")
+	public void setUserservice(UserService userservice) {
+		this.userservice = userservice;
+	}
+
+	@Override
+	public String execute() throws Exception {
+		 Boolean flag = this.userservice.regPUser(user);
+		  if(flag){
+			  this.userservice.saveUser(user);
+			  return SUCCESS;
+		  }
+		  else{
+			  return "false";
+		  }
+	}
+	 
+}

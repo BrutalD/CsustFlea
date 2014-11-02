@@ -1,0 +1,82 @@
+@CHARSET "UTF-8";
+
+body,html {
+	width: 508px;
+	height: 667px;
+	margin: 0px auto;
+	padding: 0px;
+	font-family: 黑体;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: 0px;
+}
+
+ul,li {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.mainPageLayout {
+	width: 508px;
+	height: 667px;
+	text-align: left;
+	background-image: url(../../../img/myMarket/mainPage.gif);
+}
+
+.mainPageTop {
+	height: 112px;
+}
+
+.mainPageImg img {
+	width: 76px;
+	height: 76px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+.mainPageImg {
+	width: 110px;
+	height: 112px;
+	float: left;
+}
+
+.mainPageShowMessage {
+	margin-top: 10px;
+	width: 370px;
+	height: 102px;
+}
+
+.mainPageMessage {
+	width: 370px;
+	height: 112px;
+	float: left;
+}
+
+.mainPageMiddle {
+	height: 166px;
+	margin-left: 10px;
+	width: 400px;
+}
+
+.mainPageDown {
+	height: 166px;
+	width: 480px;
+	margin-left: 10px;
+}
+
+.showPoint {
+	color: red;
+	float: left;
+	font-size: 14px;
+}
+
+textarea {
+	resize: none;
+}

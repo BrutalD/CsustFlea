@@ -1,0 +1,333 @@
+package com.csustflea.service.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.apache.struts2.ServletActionContext;
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Component;
+
+import com.csustflea.dao.GoodsDao;
+import com.csustflea.model.Collection;
+import com.csustflea.model.Goods;
+import com.csustflea.model.PGoods;
+import com.csustflea.model.PageModel;
+import com.csustflea.model.User;
+import com.csustflea.service.GoodsService;
+
+@Component("goodsService")
+public class GoodsServiceImpl implements GoodsService {
+	private GoodsDao goodsDao;
+	private SessionFactory sessionfactory;
+
+	public SessionFactory getSessionfactory() {
+		return sessionfactory;
+	}
+
+	@Resource(name = "sessionFactory")
+	public void setSessionfactory(SessionFactory sessionfactory) {
+		this.sessionfactory = sessionfactory;
+	}
+
+	public GoodsDao getGoodsDao() {
+		return goodsDao;
+	}
+
+	@Resource
+	public void setGoodsDao(GoodsDao goodsDao) {
+		this.goodsDao = goodsDao;
+	}
+
+	public List<Goods> searchGoods(String key, PageModel pageModel) {
+		List<Goods> allgoods = null;
+		String hql = "from Goods where gname like '%" + key + "%'";
+		int countAll = goodsDao.getAllGoodsNumber(hql);
+		pageModel.setCountAll(countAll);
+		int page = pageModel.getPage();
+		int pageSize = pageModel.getPageSize();
+		int pageCount = pageModel.getPageCount();
+
+		if (pageSize > countAll) {
+			pageSize = countAll;
+		}
+
+		if (page > pageCount) {
+			page = pageCount;
+			pageModel.setPage(page);
+		}
+
+		int startIndex = (int) ((page - 1) * pageSize);
+		allgoods = goodsDao.getAllGoods(startIndex, pageSize, hql);
+		return allgoods;
+	}
+
+	public List<Goods> getLivingGoods(PageModel pageModel) {
+		List<Goods> allgoods = null;
+		String hql = "from Goods as thing where thing.gtype='生活用品'";
+
+		int countAll = goodsDao.getAllGoodsNumber(hql);
+		pageModel.setCountAll(countAll);
+
+		System.out.println(countAll);
+
+		int page = pageModel.getPage();
+		int pageSize = pageModel.getPageSize();
+		int pageCount = pageModel.getPageCount();
+
+		if (pageSize > countAll) {
+			pageSize = countAll;
+		}
+
+		if (page > pageCount) {
+			page = pageCount;
+		}
+
+		int startIndex = (int) ((page - 1) * pageSize);
+		allgoods = goodsDao.getAllGoods(startIndex, pageSize, hql);
+		return allgoods;
+	}
+
+	public void addGoods(Goods goods) {
+		goodsDao.addGoods(goods);
+	}
+
+	public Goods getGoodsById(int id) {
+		Goods goods = null;
+		String hql = "from Goods as thing where thing.id=" + id;
+		goods = goodsDao.getGoodsById(hql);
+		return goods;
+	}
+
+	@Override
+	public void CpGoodsInfo(Goods goods) {
+		this.goodsDao.CpGoodsInfo(goods);
+	}
+
+	@Override
+	public void CpGoodsPic(Goods goods) {
+		Goods g = this.goodsDao.CpGoodsPic(goods);
+		g.setGpic(goods.getGpic());
+		g.setGpic2(goods.getGpic2());
+		g.setGpic3(goods.getGpic3());
+		HttpServletRequest request = ServletActionContext.getRequest();
+		HttpSession session1 = request.getSession();
+		session1.setAttribute("listgoodsinfo", g);
+		Session session = sessionfactory.openSession();
+		session.beginTransaction();
+		session.update(g);
+		session.beginTransaction().commit();
+		session.close();
+	}
+
+	@Override
+	public List<Goods> ListGoodsMan(PageModel pagemodel,int uid) {
+		Session session = this.sessionfactory.openSession();
+		String hql = "from Goods g where g.uid=?";
+		Query query = session.createQuery(hql);
+		query.setParameter(0, uid);
+		int countall = query.list().size();
+		pagemodel.setCountAll(countall);
+		session.close();
+		int page = pagemodel.getPage();
+		int pagesize = pagemodel.getPageSize();
+		int pagecount = pagemodel.getPageCount();
+		if (page > pagecount) {
+			page = pagecount;
+			pagemodel.setPage(page);  /*这里是为了将page set回去，当传到页面的时候就不会出现page=10之类的东西 */
+		};
+		if (pagesize > countall) {
+			pagesize = countall;
+		};
+		int pageindex = (page - 1)*pagesize;
+		System.out.println(pagecount+"a");
+        return((List)this.goodsDao.ListGoodsMan(pagesize, pageindex,uid));
+	}
+
+	@Override
+	public void ListGoodsManDel(int id) {
+		Session session = this.sessionfactory.openSession();
+		session.beginTransaction();
+		String hql = "delete from Goods g where g.id = ?";
+		Query query = session.createQuery(hql);
+		query.setParameter(0, id);
+		query.executeUpdate();
+		session.beginTransaction().commit();
+		session.close();
+	}
+
+	@Override
+	public void SavePGoods(PGoods pgoods) {
+		Session session = this.sessionfactory.openSession();
+		session.beginTransaction();
+		session.save(pgoods);
+		session.beginTransaction().commit();
+		session.close();
+	}
+
+	@Override
+	public List<PGoods> ListPGoods(PageModel pagemodel, int uid) {
+		Session session = this.sessionfactory.openSession();
+		String hql = "from PGoods pg where pg.uid=?";
+		Query query = session.createQuery(hql);
+		query.setParameter(0, uid);
+		int countall = query.list().size();
+		pagemodel.setCountAll(countall);
+		session.close();
+		int page = pagemodel.getPage();
+		int pagesize = pagemodel.getPageSize();
+		int pagecount = pagemodel.getPageCount();
+		if (page > pagecount) {
+			page = pagecount;
+			pagemodel.setPage(page);  /*这里是为了将page set回去，当传到页面的时候就不会出现page=10之类的东西 */
+		};
+		if (pagesize > countall) {
+			pagesize = countall;
+		};
+		int pageindex = (page - 1)*pagesize;
+		return (List)this.goodsDao.ListPGoods(pagesize, pageindex, uid);
+	}
+
+	@Override
+	public void DelPGoods(int id) {
+		Session session = this.sessionfactory.openSession();
+		session.beginTransaction();
+		String hql = "delete from PGoods pg where pg.id = ?";
+		Query query = session.createQuery(hql);
+		query.setParameter(0, id);
+		query.executeUpdate();
+		session.beginTransaction().commit();
+		session.close();
+	}
+
+	@Override
+	public List<Goods> ListCollection(PageModel pagemodel,int uid) {
+		Session session = this.sessionfactory.openSession();
+		String hql = "from Collection c where c.uid=?";
+		Query query = session.createQuery(hql);
+		query.setParameter(0, uid);
+		int countall = query.list().size();
+		pagemodel.setCountAll(countall);
+		session.close();
+		int page = pagemodel.getPage();
+		int pagesize = pagemodel.getPageSize();
+		int pagecount = pagemodel.getPageCount();
+		if (page > pagecount) {
+			page = pagecount;
+			pagemodel.setPage(page);  /*这里是为了将page set回去，当传到页面的时候就不会出现page=10之类的东西 */
+		};
+		if (pagesize > countall) {
+			pagesize = countall;
+		};
+		int pageindex = (page - 1)*pagesize;
+		System.out.println(countall+"b");
+		
+		
+		List<Collection> collection  = (List)this.goodsDao.ListCollection(pagesize, pageindex, uid);
+		
+		List<Goods> arraygoods = new ArrayList<Goods>();
+		for(int i=0;i<collection.size();i++)
+		{
+			List<Goods> listgoods = new ArrayList<Goods>();
+			Goods good = new Goods();
+			Session session1 = this.sessionfactory.openSession();
+			String hql1 = "from Goods g where g.id = ?";
+			Query query1 = session1.createQuery(hql1);
+			int gid = collection.get(i).getGid();
+			query1.setParameter(0, gid);
+			listgoods = (List)query1.list();
+		    good = listgoods.get(0);
+			arraygoods.add(i, good);
+			session1.close();
+		}
+        return arraygoods;		
+	}
+
+	@Override
+	public void SaveCGoods(Collection c) {
+         Session session = this.sessionfactory.openSession();
+         session.beginTransaction();
+         session.save(c);
+		 session.beginTransaction().commit();
+		 session.close();
+	}
+
+	@Override
+	public void DelCGoods(int id) {
+		Session session = this.sessionfactory.openSession();
+		session.beginTransaction();
+		String hql = "delete from Collection c where c.gid = ?";
+		Query query = session.createQuery(hql);
+		query.setParameter(0, id);
+		query.executeUpdate();
+		session.beginTransaction().commit();
+		session.close();
+	}
+
+	@Override
+	public List<PGoods> ListIndexPGoods(PageModel pagemodel) {
+		Session session = this.sessionfactory.openSession();
+		String hql = "from PGoods";
+		Query query = session.createQuery(hql);
+		int countall = query.list().size();
+		pagemodel.setCountAll(countall);
+		session.close();
+		int page = pagemodel.getPage();
+		int pagesize = pagemodel.getPageSize();
+		int pagecount = pagemodel.getPageCount();
+		if (page > pagecount) {
+			page = pagecount;
+			pagemodel.setPage(page);  /*这里是为了将page set回去，当传到页面的时候就不会出现page=10之类的东西 */
+		};
+		if (pagesize > countall) {
+			pagesize = countall;
+		};
+		int pageindex = (page - 1)*pagesize;
+		return (List)this.goodsDao.ListIndexPGoods(pagesize, pageindex);
+	}
+
+	public List<PGoods> ListIndexsearch(String key, PageModel pageModel) {
+		
+		List<PGoods> allgoods = null;
+		String hql = "from PGoods where pgname like '%" + key + "%'";
+		int countAll = goodsDao.getAllGoodsNumber(hql);
+		pageModel.setCountAll(countAll);
+		int page = pageModel.getPage();
+		int pageSize = pageModel.getPageSize();
+		int pageCount = pageModel.getPageCount();
+		System.out.println(countAll);
+        System.out.println(page);
+        System.out.println(pageSize);
+        System.out.println(pageCount);
+        
+		if (pageSize > countAll) {
+			pageSize = countAll;
+		}
+
+		if (page > pageCount) {
+			page = pageCount;
+			pageModel.setPage(page);
+		}
+
+		int startIndex = (int) ((page - 1) * pageSize);
+		allgoods = goodsDao.ListIndexsearch(startIndex, pageSize, hql);
+		return allgoods;
+	}
+	
+	
+	@Override
+	public List<User> ListIndexPGoodsUser(int uid) {
+        Session session = this.sessionfactory.openSession();
+        String hql = "from User u where u.id = ?";
+        Query query = session.createQuery(hql);
+        query.setParameter(0, uid);
+        List<User> u = query.list();
+        session.close();
+        return u;        
+	}
+}

@@ -1,0 +1,100 @@
+@CHARSET "UTF-8";
+
+.middleBlank {
+	height: 32px;
+	width: 1004px;
+}
+
+.leftBlank {
+	height: 680px;
+	width: 36px;
+	float: left;
+}
+
+.middleLeft {
+	width: 230px;
+	height: 680px;
+	float: left;
+}
+
+.middleChange {
+	margin-left: 8px;
+	float: left;
+	width: 508px;
+	height: 680px;
+}
+
+.middleRight {
+	float: left;
+	margin-left: 8px;
+	width: 202px;
+	height: 680px;
+}
+
+.middleTitle {
+	height: 41px;
+	background-color: #5A5A58;
+	text-align: center;
+	font-size: 22px;
+	line-height: 41px;
+	color: white;
+}
+
+.leftTop {
+	height: 179px;
+	background-image: url(../../img/myMarket/leftTop.gif);
+}
+.middleLeft li{
+	width: 230px;
+	text-align: center;
+}
+.leftMiddle {
+	height: 135px;
+	background-image: url(../../img/myMarket/leftMiddle.gif);
+}
+
+.leftDown {
+	height: 231px;
+	background-image: url(../../img/myMarket/leftDown.gif);
+}
+
+.middleLeft li {
+	height: 44px;
+	line-height: 44px;
+	font-size: 20px;
+}
+
+.middleLeft li a {
+	color: #6E6D6A;
+}
+
+
+.leftMiddlebk {
+	width: 78px;
+	float: left;
+	height: 135px;
+}
+
+.leftDownbk {
+	width: 78px;
+	float: left;
+	height: 231px;
+}
+
+.rightTop {
+	height: 309px;
+	background-image: url(../../img/myMarket/rightTop.gif);
+}
+
+.rightDown {
+	margin-top: 11px;
+	height: 347px;
+	background-image: url(../../img/myMarket/rightDown.gif);
+}
+.rightTopMain{
+	height:290px;
+}
+.rightTopMain li{
+	line-height:30px;
+	height: 30px;
+}

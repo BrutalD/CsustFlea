@@ -1,0 +1,95 @@
+package com.csustflea.service.impl;
+
+import javax.annotation.Resource;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Component;
+
+import com.csustflea.dao.UserDao;
+import com.csustflea.model.User;
+import com.csustflea.service.UserService;
+
+@Component("userservice")
+public class UserServiceImpl implements UserService {
+	private UserDao userdao;
+	private SessionFactory sessionfactory;
+
+	public SessionFactory getSessionfactory() {
+		return sessionfactory;
+	}
+
+	@Resource(name = "sessionFactory")
+	public void setSessionfactory(SessionFactory sessionfactory) {
+		this.sessionfactory = sessionfactory;
+	}
+
+	public UserDao getUserdao() {
+		return userdao;
+	}
+
+	@Resource(name = "userdao")
+	public void setUserdao(UserDao userdao) {
+		this.userdao = userdao;
+	}
+
+	public void saveUser(User user) {
+		this.userdao.saveUser(user);
+	}
+
+	@Override
+	public boolean logUser(User user) {
+		return (this.userdao.logUser(user));
+	}
+
+	@Override
+	public boolean regPUser(User user) {
+		return (this.userdao.regPUser(user));
+	}
+
+	@Override
+	public void CpUser(User user, int id) {
+		User u = this.userdao.CpUser(user, id);
+		u.setAddress(user.getAddress());
+		u.setAge(user.getAge());
+		u.setCollege(user.getCollege());
+		u.setEmail(user.getEmail());
+		u.setGrade(user.getGrade());
+		u.setPhonenumber(user.getPhonenumber());
+		u.setRealname(user.getRealname());
+		u.setSex(user.getSex());
+		u.setUsername(user.getUsername());
+		Session session = sessionfactory.openSession();
+		session.beginTransaction();
+		session.update(u);
+		session.beginTransaction().commit();
+		session.close();
+	}
+
+	@Override
+	public User listUserInfo(int idTemp) {
+		return (this.userdao.listUserInfo(idTemp));
+	}
+
+	@Override
+	public boolean checkPwd(String newpwd, String usernameTemp) {
+		return (this.userdao.checkPwd(newpwd, usernameTemp));
+	}
+
+	@Override
+	public void updatePwd(int id, String username, String password) {
+		this.userdao.updatePwd(id, username, password);
+	}
+
+	@Override
+	public void CpUserPic(User user, int id) {
+		User u = this.userdao.CpUser(user, id);
+		u.setImage(user.getImage());
+		Session session = sessionfactory.openSession();
+		session.beginTransaction();
+		session.update(u);
+		session.beginTransaction().commit();
+		session.close();
+	}
+
+}

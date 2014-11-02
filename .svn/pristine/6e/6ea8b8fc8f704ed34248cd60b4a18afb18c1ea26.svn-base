@@ -1,0 +1,52 @@
+@CHARSET "UTF-8";
+
+body,html {
+	width: 508px;
+	height: 667px;
+	margin: 0px auto;
+	padding: 0px;
+	font-family: 黑体;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: 0px;
+}
+
+ul,li {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+.mainPageLayout {
+	width: 508px;
+	height: 667px;
+	text-align: left;
+	background-image: url(../../../img/myMarket/mainPage.gif);
+}
+.basicInforBlank{
+	height: 10px;
+	width: 508px;
+}
+.changeFacePic{
+	margin-left: 10px;
+	width: 478px;
+	height: 607px;
+}
+
+.submitPic{
+	height: 120px;
+	width: 76px;
+}
+.submitPic img{
+	width: 76px;
+	height:76px;
+}
+.changeList li{
+	height:38px;
+}

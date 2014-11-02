@@ -1,0 +1,95 @@
+@CHARSET "UTF-8";
+
+.layout21 {
+	height: 403px;
+	width: 1004px;
+}
+
+.layout22 {
+	height: 609px;
+	width: 1004px;
+}
+
+.topLeftBlank {
+	width: 40px;
+	height: 403px;
+	float: left;
+}
+
+.topMain {
+	width: 904px;
+	height: 403px;
+	float: left;
+}
+
+.topMainTitle {
+	width: 904px;
+	height: 50px;
+}
+
+.topMainLeft {
+	width: 321px;
+	height: 365px;
+	float: left;
+}
+
+.topMainRight {
+	width: 583px;
+	height: 365px;
+	float: left;
+}
+
+.large img {
+	width: 264px;
+	height: 244px;
+}
+
+.small {
+	margin-top: 15px;
+}
+
+.small img {
+	width: 80px;
+	height: 80px;
+	margin-right: 11px;
+}
+
+.topMainRight li {
+	height: 30px;
+}
+
+.listLine {
+	height: 22px;
+	background-color: #F3F1ED;
+	width: 220px;
+	float: left;
+}
+
+.listLine2 {
+	height: 175px;
+	width: 440px;
+	background-color: #F3F1ED;
+	float: left;
+}
+
+.bottomMain {
+	width: 904px;
+	height: 589px;
+	float: left;
+}
+
+.leaveMessage {
+	height: 180px;
+	width: 904px;
+}
+
+.showMessage {
+	margin-top:10px;
+	height: 400px;
+	width: 904px;
+}
+
+.leaveMsMain {
+	width: 904px;
+	height: 150px;
+}
